@@ -6,11 +6,6 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
-import io.netty.handler.ssl.SslHandler;
-
-import javax.net.ssl.SSLEngine;
-
-import com.verifone.hashserver.ssl.SecureSslContextFactory;
 
 public class NettyHashServerInitializer extends
 		ChannelInitializer<SocketChannel> {
@@ -20,10 +15,13 @@ public class NettyHashServerInitializer extends
 
 	    ChannelPipeline p = ch.pipeline();
 		
+	    // Uncomment the following lines if you want to use SSL 2-way handshake
+	    /*
 	    SSLEngine engine = SecureSslContextFactory.getServerContext().createSSLEngine();
         engine.setUseClientMode(false);
         engine.setNeedClientAuth(true);
 	    p.addLast("ssl", new SslHandler(engine));
+	    */
 	    
 	    p.addLast(new HttpRequestDecoder());
         // Uncomment the following line if you don't want to handle HttpChunks.
