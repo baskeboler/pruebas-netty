@@ -1,4 +1,4 @@
-package com.verifone.victor.pruebas;
+package com.verifone.hashserver;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

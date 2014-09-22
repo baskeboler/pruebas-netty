@@ -1,7 +1,9 @@
-package com.verifone.victor.pruebas;
+package com.verifone.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
+
+import com.verifone.hashserver.NettyHashServer;
 
 
 

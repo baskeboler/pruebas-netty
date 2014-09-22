@@ -1,6 +1,4 @@
-package com.verifone.victor.pruebas;
-
-import org.springframework.stereotype.Component;
+package com.verifone.hashserver;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,13 +7,15 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+import org.springframework.stereotype.Component;
+
 
 @Component
 public class NettyHashServer {
 	private int port;
 
 	public NettyHashServer() {
-		this.port = 8080;
+		this.port = 8443;
 	}
 	public NettyHashServer(int port) {
 		this.port = port;

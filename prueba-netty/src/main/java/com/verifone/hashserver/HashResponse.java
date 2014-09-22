@@ -1,4 +1,4 @@
-package com.verifone.victor.pruebas;
+package com.verifone.hashserver;
 
 public class HashResponse {
 	String hash;
